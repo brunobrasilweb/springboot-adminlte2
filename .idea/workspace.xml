@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a82359f4-429b-4360-9e40-3278465e8bbe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/brunobrasilweb/springadm/MvcConfig.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/brunobrasilweb/springadm/MvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/brunobrasilweb/springadm/MvcConfig.java" />
-    </list>
+    <list default="true" id="a82359f4-429b-4360-9e40-3278465e8bbe" name="Default" comment="" />
     <ignored path="SpringAdminLte.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
