@@ -1,8 +1,11 @@
 package br.com.brunobrasilweb.springadm.model;
 
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
@@ -14,7 +17,8 @@ public class Customers extends AbstractModel<Long> {
     private String lastname;
     @Column(nullable = false, unique = true)
     private String email;
-    @Column(name = "added_date")
+    @Column(name = "added_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date addedDate;
 
     public String getFirstname() {

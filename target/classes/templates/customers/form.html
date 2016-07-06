@@ -12,31 +12,35 @@
     </ol>
 </section>
 <div layout:fragment="content">
-    <form role="form" class="form-horizontal" th:object="${customer}" th:action="@{/customer/save}" method="post">
-        <div class="box">
-            <div class="box-header with-border">
-                <h3 class="box-title">Formulário</h3>
-                <div class="box-tools pull-right">
-                    <a href="/customers" type="button" class="btn btn-box-tool"><i class="fa fa-list-ul"></i></a>
-                </div>
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Formulário</h3>
+            <div class="box-tools pull-right">
+                <a href="/customers" type="button" class="btn btn-box-tool"><i class="fa fa-list-ul"></i></a>
             </div>
+        </div>
+        <form data-toggle="validator" role="form" th:object="${customer}" th:action="@{/customers/save}" method="post">
             <div class="box-body">
                 <input type="hidden" th:field="*{id}"/>
 
                 <div class="form-group">
                     <label for="Firstname">Nome</label>
-                    <input type="text" class="form-control" th:field="*{firstname}" id="firstname" />
+                    <input type="text" required="true" class="form-control" th:field="*{firstname}" id="firstname" />
                 </div>
                 <div class="form-group">
                     <label for="Lastname">Sobrenome</label>
-                    <input type="text" class="form-control" th:field="*{lastname}" id="lastname" />
+                    <input type="text" required="true" class="form-control" th:field="*{lastname}" id="lastname" />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" required="true" class="form-control" th:field="*{email}" id="email" />
                 </div>
             </div>
             <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 </body>
 </html>

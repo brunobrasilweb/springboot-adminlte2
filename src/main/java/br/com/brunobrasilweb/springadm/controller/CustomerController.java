@@ -8,6 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 @Controller
 public class CustomerController {
@@ -44,9 +48,10 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/customers/save", method = RequestMethod.POST)
-    public String save(Customers customer) {
+    public String save(Customers customer, final RedirectAttributes ra) {
 
         Customers save = customerService.save(customer);
+        ra.addFlashAttribute("successFlash", "Cliente foi salvo com sucesso.");
         return "redirect:/customers";
 
     }
